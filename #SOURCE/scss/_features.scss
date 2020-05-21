@@ -1,0 +1,90 @@
+.features {
+  background-color: #f6f5f3;
+  ._container {
+    padding-top: 130px;
+    padding-bottom: 160px;
+    max-width: 1220px;
+    margin: 0 auto;
+    background-image: url(../img/PenHolder.png);
+    background-position: -45px 0;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    &::before, &::after {
+      position: absolute;
+    }
+    &::before {
+      content: url(../img/Earphones.png);
+      top: 0;
+      right: 0;
+    }
+    &::after {
+      content: url(../img/CoffeeCup.png);
+      bottom: -40px;
+      right: -5px;
+    }
+  }
+  &__header {
+    margin-bottom: 90px;
+  }
+  // .features__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+  }
+  // .features__item
+  &__item {
+    padding-top: 90px;
+    margin: 0 20px;
+    text-align: center;
+    background-position: top center;
+    background-repeat: no-repeat;
+    // .features__item_1
+    &_1 {
+      background-image: url(../img/icons/picture.png);
+    }
+    // .features__item_2
+    &_2 {
+      background-image: url(../img/icons/airplane.png);
+    }
+    // .features__item_3
+    &_3 {
+      background-image: url(../img/icons/bulb.png);
+    }
+  }
+  // .features__title
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  // .features__text
+}
+
+@media (max-width: 768px) {
+  .features {
+    ._container {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      background-image: none;
+      &::before, &::after {
+        display: none;   
+      }
+    }
+    &__header {
+      margin-bottom: 40px;
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item {
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+}

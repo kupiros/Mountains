@@ -1,0 +1,112 @@
+@import '_normalize';
+
+$wm: 747px;
+$wt: 748px;
+$wd: 1260px;
+
+@font-face {
+  font-family: '';
+  src: url('../fonts/Exo-Regular.woff2') format('woff2'), url('../fonts/Exo-Regular.woff') format('woff'), url('../fonts/Exo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: '';
+  src: url('../fonts/Exo-Medium.woff2') format('woff2'), url('../fonts/Exo-Medium.woff') format('woff'), url('../fonts/Exo-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: '';
+  src: url('../fonts/Exo-Italic.woff2') format('woff2'), url('../fonts/Exo-Italic.woff') format('woff'), url('../fonts/Exo-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+body {
+  font-family: 'Exo', Arial, sans-serif;
+  min-width: 320px;
+} 
+
+._container {
+  box-sizing: content-box;
+  padding: 0 3%;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.tryBtn {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff6d6d;
+  border-radius: 3px;
+}
+
+.section-header {
+  &_center {
+    text-align: center;
+  }
+  &__subtitle {
+    color: #ff6d6d;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+
+    &_more::after {
+      content: '....';
+      color: #ff6d6d;
+      margin-left: 10px;
+    }
+  }
+  &__parph {
+    color: #282828;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+}
+
+.content-text {
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.66;
+}
+@media (max-width: 768px) {
+  .content-text {
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.66;
+  }
+
+  .section-header {  
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 20px;
+  
+      &_more::after {
+        display: none;
+      }
+    }
+    &__parph {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  }
+}
+
+@import '_header';
+@import '_design';
+@import '_features';
+@import '_laptop';
+@import '_dopInfo';
+@import '_swiper';

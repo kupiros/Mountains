@@ -1,0 +1,81 @@
+.laptop {
+  position: relative;
+  // .laptop__block
+  &__block {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    &::after {
+      content: '';
+      background-color: #fb8686;
+      position: absolute;
+      height: 300%;
+      width: 100%;
+      transform-origin: bottom right;
+      transform: rotate(-55deg);
+      right: 0;
+      bottom: 0;
+    }
+  }
+  // .laptop__container
+  &__container {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../img/notebook.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+  &__wrapper {
+    max-width: 500px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1120px) {
+  .laptop {
+    padding: 50px 0;
+    &__block {
+      width: 80%;
+    }
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 600px;
+      background-position: center;
+      background-size: contain;
+    }
+    &__wrapper {
+      max-width: 65%;
+      margin: 0;
+      text-align: center;
+    }
+    &__header {
+      margin-bottom: 8%;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .laptop {
+    padding: 0;
+    &__block {
+      display: none;
+    }
+    &__container {
+      background: none;
+      padding: 40px 0;
+      min-height: 0;
+    }
+    &__wrapper {
+      margin: 0;
+      max-width: none;
+      padding: 0 3%;
+    }
+  }
+}

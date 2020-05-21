@@ -1,0 +1,44 @@
+.header {
+  background: url(../img/back-photo.jpg) center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // .header__title
+  &__title {
+    max-width: 710px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 75px;
+    font-size: 50px;
+    color: #282828;
+    margin-bottom: 50px;
+  }
+  // .header__tryBtn
+  &__tryBtn {
+    padding: 20px 50px;
+  }
+  // .header__note
+  &__note {
+    color: #282828;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;    
+		// .header__title
+		&__title {
+      font-size: 30px;
+      line-height: 50px;
+      margin-bottom: 20px;
+		}
+  }
+}
