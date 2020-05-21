@@ -9,7 +9,7 @@ new Swiper ('.slider', { //Класс контейнера
   //spaceBetween: 50, //расстояние между слайдами В ПИКСЕЛЯХ
   //slidesPerView: 2, //кол-во отображаемых слайдов
   //grabCursor: true, //заменить курсор на захват
-  //centeredSlides: true, //активный слайд в центре
+  centeredSlides: true, //активный слайд в центре
   //speed: 300,
   //autoHeight: true,
   //slidesPerGroup: 1,
